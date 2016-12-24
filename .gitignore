@@ -1,0 +1,11 @@
+node_modules/
+npm-debug.log
+.idea
+.vscode
+public/js/bundle.js.*
+.babelrc
+public/js/*.ttf
+public/js/*.eot
+public/js/*.svg
+public/js/*.woff
+public/js/*.woff2
