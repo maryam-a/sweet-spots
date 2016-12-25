@@ -1,93 +1,51 @@
-# Sweet Spots - Team No REST for the Wicked
+# Sweet Spots
 
-Sweet Spots is a web application that allows users to map, filter and review points of interest on campus.
+MIT 6.170 Fall 2016 Final Project by Maryam Archie, Nishchal Bhandari, Bob Liang, Isaac Rosado.
+
+## Overview
+
+Sweet Spots is a web application that allows users to map, filter and review points of interest within the MIT campus.
 
 Try our app today!
 https://sweet-spots.herokuapp.com/
 
-### Installation
+![My Image](screenshot.png)
 
-1. First, run `npm install` in the root of the project
+## Installation
+1. Clone the repository and navigate to the root of the repository.
 
-1. Run `npm start` to build and run a local server
+1. Run `npm install` to install the necessary node modules.
 
-1. navigate to `localhost:3000` to reach the main page
+1. In a separate terminal window, open `mongod`.
 
-1. At the main page, you can interact with the map and search for things. After you search, changing the map bounds constrains the search to a location. You cannot add spots without logging in.
+1. Run `npm start` to build the project and create a local server.
 
-1. Click the login button or navigate to `/login` to reach the login page. You can
-login or click the link to navigate to the register page.
+1. Navigate to `localhost:3000` in your favorite browser to open the main page.
 
-1. Register using an MIT email and choose a username and password. After submitting,
-you might have to manually navigate to the `/login` page
+1. At the main page, you can interact with the map and search for Spots. After completing a search, changing the map bounds constrains the search to a location.
 
-1. Login using your email and password
+1. In order to add or review a Spot, you need to be signed in. If you already have an account, Click the Login button or navigate to `localhost:3000/login` to reach the login page. 
+Otherwise, click the Register button or navigate to `localhost:3000/register` to register. You need an MIT email address in order to complete registration.
+
+1. Login using your email and password.
 
 1. Once logged in, you can add spots. Do this by dragging the big marker onto the map.
 
 1. You can also post reviews for spots, upvote and downvote other people's reviews, and favorite spots you like!
 
-### Testing
-1. Ensure that you've run `npm install` in the root directory
+## Testing
+1. Ensure that you've run `npm install` in the root directory.
 
 2. Run `npm test` to run the functional (routes) and unit (model) tests.
-Because we seed the database with Tags in `app.js`, we need to use `require` it in the tests. As a result, please ignore the following errors:
+Because we seed the database with Tags in `app.js`, we need to `require` it in the tests. As a result, please ignore the following errors:
 ```
 ERROR in multi main
 Module not found: Error: Cannot resolve 'file' or 'directory' ./react/main.js in <path_to>\tests\model_tests
  @ multi main
 ```
 
-### File Ownership
-**Maryam Archie**
-+ app.js
-+ routes/reviews.js
-+ routes/spots.js
-+ routes/tags.js
-+ routes/users.js
-+ seeds/*
-+ services/*
-+ models/Users.js
-+ tests/router_tests/*
-+ utils/*
-+ webpack.config.js
-+ webpack.dev.config.js
-+ package.json
-+ .gitignore
-+ README.md
-+ .eslintrc.json
-+ .slugignore
+## Documents
++ ProjectDesign.pdf - Contains information about the concepts, data model and security of the project.
++ [Final Presentation](https://docs.google.com/presentation/d/1PabaAdRTmYSmqBgYco62rbZK26PoYPYDz8GuAeHlPXE/edit?usp=sharing)
 
-
-**Nishchal Bhandari**
-+ public/index.html
-+ views/spotDetails.ejs
-+ views/login.ejs
-+ views/register.ejs
-+ react/main.js
-+ react/Elements/SweetSpotsMap.jsx
-+ react/Pages/Main.jsx (partially)
-+ routes/login.js
-+ routes/register.js
-+ public/js/login.js
-+ public/js/register.js
-+ public/stylesheets/styles.css
-
-**Bob Liang**
-+ react/App.jsx
-+ react/Pages/*
-+ react/Elements/AddASpot.jsx
-+ react/Elements/AddASpotForm.jsx
-+ react/Elements/NavBar.jsx
-+ react/Elements/NavBarWithoutSearch.jsx
-+ react/Elements/SearchResults.jsx
-+ views/InternalServerError.ejs
-+ views/NotFound.ejs
-+ views/profile.ejs
-+ views/register.ejs
-+ public/stylesheets/styles.css (partially)
-
-**Isaac Rosado**
-+ models/Review.js
-+ models/Spots.js
-+ models/Tags.js
+Disclaimer: This has only been tested with Google Chrome.
